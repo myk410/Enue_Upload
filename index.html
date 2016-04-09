@@ -1,87 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
+    <meta content=
+    "initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"
+    name="viewport">
+    <meta content=
+    "default-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src &apos;self&apos; &apos;unsafe-inline&apos; *"
+    http-equiv="Content-Security-Policy">
     <title>Enue Upload</title>
-
     <link href="css/ionic.app.css" rel="stylesheet">
-    --&gt;
-
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <!--<script src="js/ng-cordova.min.js"></script>-->
-    <script src="js/ng-cordova.min.js"></script>       
-    <script src="cordova.js"></script>
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-    
-  </head>
-  <body ng-app="starter" class="platform-ios platform-cordova platform-webview">
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-      </ion-header-bar>
- 
-   <ion-content>
-          <img style="padding: 20px 0px 0px 0px" ng-src="img/Logo.png" width="100%" height="auto">
-          <center><font color="#cccc33">
-<div style="font-size: 24px; padding: 50px" id="status"></div>
-</font></center>
-      </ion-content>
-  
-        <ion-footer-bar class="bar-stable">
-          
-          <div class="row">
-              <div class="col"><div class="buttons">
-                  <button id="takeVideo" class="button icon icon-top ion-record">Record</button>
-              </div></div>
-              <div class="col"></div>
-              <div class="col"><div align="right" class="buttons" >
-                  <button id="Album" class="button icon icon-top ion-ios-albums">Album</button>
-              </div></div>
-          </div>
-          
-          
-      </ion-footer-bar>
-    </ion-pane>  
-  
- <!--
-        <ion-footer-bar class="bar-stable">
-          
-          <div class="row">
-          
-              <div class="col"><div class="buttons">
-              
-             <!-- FOR ANDROID
-              <button id="takeVideo" class="button icon icon-top ion-videocamera">Record</button> -->
-<!--        <button id="takeVideo" class="button button-icon">
-                            <i class="icon ion-ios-videocam"></i> 
-                            <span>Record</span></button>
-
-              </div></div>
-              <div class="col"></div>
-              <div class="col"><div align="right" class="buttons" ng-click="doSomething()">
-              
-              <!-- FOR ANDROID
-              <button id="rightButton" class="button icon icon-top ion-android-film">Album</button>
-              -->
- <!--              
-<button class="button button-icon">
-<i class="icon ion-ios-albums"></i> 
-<span>Album</span></button>
-
-              </div></div>
-              
-          </div>
-          
-          
-      </ion-footer-bar>
-      </ion-pane>
-      -->
-      
-  </body>
+</head>
+<body>
+    --&gt; <!-- ionic/angularjs js -->
+     
+    <script src="lib/ionic/js/ionic.bundle.js">
+    </script> <!-- cordova script (this will be a 404 during development) -->
+     <!--<script src="js/ng-cordova.min.js"></script>-->
+     
+    <script src="js/ng-cordova.min.js">
+    </script> 
+    <script src="cordova.js">
+    </script> <!-- your app's js -->
+     
+    <script src="js/app.js">
+    </script> <img height="auto" style="padding: 20px 0px 0px 0px" width=
+    "100%">
+    <center>
+        <font color="#CCCC33"></font>
+        <div id="status" style="font-size: 24px; padding: 10%">
+            <font color="#CCCC33"></font>
+        </div>
+        <p style="padding: 40% 0 0 0">Uploading uses <u><b>alot</b></u> of
+        data.<br>
+        For best results, please connect to wifi <i class=
+        "icon ion-wifi"></i>.</p>
+    </center>
+    <div class="row">
+        <div class="col">
+            <div class="buttons">
+                <button class="button icon icon-top ion-record" id=
+                "takeVideo">Record</button>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <div align="right" class="buttons">
+                <button class="button icon icon-top ion-ios-albums" id="Album"
+                onclick="getPhoto()">Album</button>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
