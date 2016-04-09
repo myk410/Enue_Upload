@@ -72,56 +72,8 @@ function captureSuccess(mediaFile) {
 			alert("Error: No files returned." + error.code)
 		}
 	}
-	//Upload files to server
-	/*
-function uploadFile(mediaFile) {
-    var ft = new FileTransfer(),
-        path = mediaFile.fullPath,
-        name = mediaFile.name;
-    var options = new FileUploadOptions();
-    options.chunkedMode = false;
-            options.fileKey = "mediaFile";
-            options.fileName = name;
-            options.mimeType = "video/mpeg";
-    var params = new Object();
-    params.value1 = "test";
-    params.value2 = "param";
- 
-    options.params = params;
 
-options.headers = {
-    Connection: "close"
-};
-    
-    ft.upload(path, "http://enueupload.com/upload.php",
-        function(result) {
-            console.log('Upload success: ' + result.responseCode);
-            console.log(result.bytesSent + ' bytes sent');
-            console.log("Response = " + r.response);
-            alert("Response = " + r.response);
-        },
-        function(error) {
-            console.log('Error uploading file ' + path + ': ' + error.code);
-            alert('Error uploading file ' + path + ': ' + error.code);
-        },
-        options); 
-    alert(mediaFile.fullPath);
-}
-
-function win(r) {
-    console.log("Code = " + r.responseCode);
-    console.log("Response = " + r.response);
-    console.log("Sent = " + r.bytesSent);
-    alert(name + 'uploaded successfully!');
-}
-
-function fail(error) {
-    alert("An error has occurred: Code = " = error.code);
-}
-
-*/
-	//New file transfer attempt
-
+//Upload files to server
 function uploadFile(mediaFile) {
 	function win(r) {
 		console.log("Code = " + r.responseCode);
